@@ -95,4 +95,3 @@ function App() {
   return <KakaoShareButton onClick={() => kakaoClipboard(clipData)} />
 }
 ```
-# react-kakao-share

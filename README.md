@@ -79,7 +79,7 @@ function App() {
 
 ###### 카카오톡 아이콘을 클릭하여 현재페이지를 공유합니다.
 
-###### 단, 아이콘 타입의 카카오톡 공유하기 기능을 사용할 시 카카오 SDK인 **useKakaoScript를 전역 레이아에 설정할 필요없습니다.**
+###### 단, 아이콘 타입의 카카오톡 공유하기 버튼을 사용할 시 카카오 SDK인 **useKakaoScript를 전역 레이아웃에 설정할 필요없습니다.**
 
 ```jsx
 import { KakaoShareButton, kakaoClipboard } from 'react-kakao-share'
@@ -95,3 +95,4 @@ function App() {
   return <KakaoShareButton onClick={() => kakaoClipboard(clipData)} />
 }
 ```
+# react-kakao-share

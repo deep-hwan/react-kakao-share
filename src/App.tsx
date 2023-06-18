@@ -10,7 +10,7 @@ function App() {
   }
   return (
     <>
-      <KakaoShareButton onClick={() => kakaoClipboard(clipData)} />
+      <KakaoShareButton size="136px" onClick={() => kakaoClipboard(clipData)} />
     </>
   )
 }

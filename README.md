@@ -92,6 +92,9 @@ function App() {
     APIKEY: KAKAO_JAVASCRIPT_KEY,
   }
 
-  return <KakaoShareButton onClick={() => kakaoClipboard(clipData)} />
+  return (
+    // size를 사용하여 아이콘의 크기를 수정할 수 있습니다.
+    <KakaoShareButton size="36px" onClick={() => kakaoClipboard(clipData)} />
+  )
 }
 ```

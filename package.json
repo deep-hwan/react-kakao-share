@@ -65,7 +65,8 @@
     "react",
     "typescript",
     "kakao",
-    "next",
+    "kakao-share",
+    "kakao-clipboard",
     "sns_share",
     "clipboard"
   ],

@@ -1,48 +1,48 @@
-import { useEffect } from 'react'
+import { useEffect } from "react";
 
 export const useKakaoScript = (): void => {
   useEffect(() => {
-    const script = document.createElement('script')
-    script.src = 'https://developers.kakao.com/sdk/js/kakao.js'
-    script.async = true
-    document.body.appendChild(script)
+    const script = document.createElement("script");
+    script.src = "https://developers.kakao.com/sdk/js/kakao.js";
+    script.async = true;
+    document.body.appendChild(script);
 
     return () => {
-      document.body.removeChild(script)
-    }
-  }, [])
-}
+      document.body.removeChild(script);
+    };
+  }, []);
+};
 
 interface KakaoShareButtonProps {
-  size?: string
-  onClick?: () => void
+  size?: string;
+  onClick?: () => void;
 }
 
 export const KakaoShareButton: React.FC<KakaoShareButtonProps> = ({
   size,
   onClick,
 }) => {
-  useKakaoScript()
+  useKakaoScript();
 
   return (
     <button
       type="button"
       style={{
-        width: size ? size : '36px',
-        height: size ? size : '36px',
-        minWidth: size ? size : '36px',
-        minHeight: size ? size : '36px',
-        border: 'none',
+        width: size ? size : "36px",
+        height: size ? size : "36px",
+        minWidth: size ? size : "36px",
+        minHeight: size ? size : "36px",
+        border: "none",
         padding: 0,
-        backgroundColor: 'transparent',
-        cursor: 'pointer',
+        backgroundColor: "transparent",
+        cursor: "pointer",
       }}
       onClick={onClick}
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        width={size ? size : '36px'}
-        height={size ? size : '36px'}
+        width={size ? size : "36px"}
+        height={size ? size : "36px"}
         viewBox="0 0 22 22"
       >
         <g id="kakao-symbol" transform="translate(-1021.291 -683.291)">
@@ -64,21 +64,21 @@ export const KakaoShareButton: React.FC<KakaoShareButtonProps> = ({
         </g>
       </svg>
     </button>
-  )
-}
+  );
+};
 
 //
 //// click
 interface KakaoClipboardProps {
-  title: string
-  content: string
-  image?: string
-  APIKEY: string | undefined
+  title: string;
+  content: string;
+  image?: string;
+  APIKEY: string | undefined;
 }
 
 declare global {
   interface Window {
-    Kakao: any // 또는 필요한 타입으로 변경하세요
+    Kakao: any; // 또는 필요한 타입으로 변경하세요
   }
 }
 
@@ -88,22 +88,22 @@ export function kakaoClipboard({
   image,
   APIKEY,
 }: KakaoClipboardProps): void {
-  const KAKAOAPI: string | undefined = APIKEY
+  const KAKAOAPI: string | undefined = APIKEY;
 
   if (window.Kakao) {
-    const kakao = window.Kakao
+    const kakao = window.Kakao;
     if (!kakao.isInitialized()) {
-      kakao.init(KAKAOAPI)
+      kakao.init(KAKAOAPI);
     }
 
     kakao.Link.sendDefault({
-      objectType: 'feed',
+      objectType: "feed",
       content: {
         title: title,
         description: content,
         imageUrl: image
           ? image
-          : 'https://imagedelivery.net/vJSpkH6oHM7zquolzolo7A/1448b2bc-67cb-4046-95c9-e3814a4e7e00/public',
+          : "https://imagedelivery.net/vJSpkH6oHM7zquolzolo7A/1448b2bc-67cb-4046-95c9-e3814a4e7e00/public",
         link: {
           mobileWebUrl: window.location.href,
           webUrl: window.location.href,
@@ -111,13 +111,13 @@ export function kakaoClipboard({
       },
       buttons: [
         {
-          title: '바로가기',
+          title: "바로가기",
           link: {
             mobileWebUrl: window.location.href,
             webUrl: window.location.href,
           },
         },
       ],
-    })
+    });
   }
 }

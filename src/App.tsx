@@ -5,12 +5,12 @@ import { KakaoShareButton, kakaoClipboard } from "./lib";
 function App() {
   const clipData = {
     title: "제목",
-    content: "내용",
+    description: "내용",
     APIKEY: "",
   };
   return (
     <div style={{ display: "flex" }}>
-      <KakaoShareButton size="200px" onClick={() => kakaoClipboard(clipData)} />
+      {/* <KakaoShareButton size="200px" onClick={() => kakaoClipboard(clipData)} /> */}
     </div>
   );
 }

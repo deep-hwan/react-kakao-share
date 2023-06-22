@@ -67,7 +67,7 @@ export const KakaoShareButton: React.FC<KakaoShareButtonProps> = ({
 //// click
 interface KakaoClipboardProps {
   title: string;
-  content: string;
+  description: string;
   image?: string;
   APIKEY: string | undefined;
 }
@@ -80,7 +80,7 @@ declare global {
 
 export function kakaoClipboard({
   title,
-  content,
+  description,
   image,
   APIKEY,
 }: KakaoClipboardProps): void {
@@ -96,7 +96,7 @@ export function kakaoClipboard({
       objectType: "feed",
       content: {
         title: title,
-        description: content,
+        description: description,
         imageUrl: image
           ? image
           : "https://imagedelivery.net/vJSpkH6oHM7zquolzolo7A/1448b2bc-67cb-4046-95c9-e3814a4e7e00/public",

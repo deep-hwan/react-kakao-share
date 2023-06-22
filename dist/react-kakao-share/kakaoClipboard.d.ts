@@ -7,7 +7,7 @@ interface KakaoShareButtonProps {
 export declare const KakaoShareButton: React.FC<KakaoShareButtonProps>;
 interface KakaoClipboardProps {
     title: string;
-    content: string;
+    description: string;
     image?: string;
     APIKEY: string | undefined;
 }
@@ -16,5 +16,5 @@ declare global {
         Kakao: any;
     }
 }
-export declare function kakaoClipboard({ title, content, image, APIKEY, }: KakaoClipboardProps): void;
+export declare function kakaoClipboard({ title, description, image, APIKEY, }: KakaoClipboardProps): void;
 export {};

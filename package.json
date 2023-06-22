@@ -1,6 +1,6 @@
 {
   "name": "react-kakao-share",
-  "version": "0.4.3",
+  "version": "0.4.6",
   "private": false,
   "files": [
     "dist",
@@ -70,7 +70,7 @@
     "social-share",
     "kakao-share",
     "kakao-clipboard",
-    "sns_share",
+    "sns-share",
     "clipboard"
   ],
   "author": "deep",

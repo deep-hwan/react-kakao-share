@@ -38,13 +38,13 @@
   - next.js > \_app.js or \_app.ts
 
 ```jsx
-import React from 'react'
-import { useKakaoScript } from 'react-kakao-share'
+import React from "react";
+import { useKakaoScript } from "react-kakao-share";
 
 export default function Index() {
-  useKakaoScript()
+  useKakaoScript();
 
-  return <>....</>
+  return <>....</>;
 }
 ```
 
@@ -54,22 +54,24 @@ export default function Index() {
 
 ###### 현재 페이지(URL)를 공유하기 위해서는 kakaoClipboard를 가져와 **제목,내용,공유 이미지,key 전달이 필요**합니다.
 
+**ClipData의 내용은 반드시 입력이 필요합니다**
+
 ```jsx
-import { kakaoClipboard } from 'react-kakao-share'
+import { kakaoClipboard } from "react-kakao-share";
 
 function App() {
   const clipData = {
-    title: '제목',
-    content: '내용',
-    image: 'example_image.png',
+    title: "제목",
+    description: "내용",
+    image: "example_image.png",
     APIKEY: KAKAO_JAVASCRIPT_KEY,
-  }
+  };
 
   return (
     <button type="button" onClick={() => kakaoClipboard(clipData)}>
       현재 페이지 공유하기
     </button>
-  )
+  );
 }
 ```
 
@@ -82,19 +84,19 @@ function App() {
 ###### 단, 아이콘 타입의 카카오톡 공유하기 버튼을 사용할 시 카카오 SDK인 **useKakaoScript를 전역 레이아웃에 설정할 필요없습니다.**
 
 ```jsx
-import { KakaoShareButton, kakaoClipboard } from 'react-kakao-share'
+import { KakaoShareButton, kakaoClipboard } from "react-kakao-share";
 
 function App() {
   const clipData = {
-    title: '제목',
-    content: '내용',
-    image: 'example_image.png',
+    title: "제목",
+    description: "내용",
+    image: "example_image.png",
     APIKEY: KAKAO_JAVASCRIPT_KEY,
-  }
+  };
 
   return (
     // size를 사용하여 아이콘의 크기를 수정할 수 있습니다.
     <KakaoShareButton size="36px" onClick={() => kakaoClipboard(clipData)} />
-  )
+  );
 }
 ```

@@ -65,9 +65,15 @@
     "react",
     "typescript",
     "kakao",
+<<<<<<< HEAD
     "react-share",
     "kakao-share",
     "social-share",
+=======
+    "kakao-share",
+    "kakao-clipboard",
+    "sns_share",
+>>>>>>> 277811f90c8b94c8f6ebf8e3bae42bdb2fb4c5c0
     "clipboard"
   ],
   "author": "deep",

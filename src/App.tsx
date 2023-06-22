@@ -1,18 +1,18 @@
-import React from 'react'
-import { KakaoShareButton, kakaoClipboard } from './lib'
+import React from "react";
+import { KakaoShareButton, kakaoClipboard } from "./lib";
 // import { KakaoShareButton, kakaoClipboard } from 'react-kakao-share'
 
 function App() {
   const clipData = {
-    title: '제목',
-    content: '내용',
-    APIKEY: '24370b96cc5a71343a5be80e63cd8f71',
-  }
+    title: "제목",
+    content: "내용",
+    APIKEY: "",
+  };
   return (
-    <>
-      <KakaoShareButton size="136px" onClick={() => kakaoClipboard(clipData)} />
-    </>
-  )
+    <div style={{ display: "flex" }}>
+      <KakaoShareButton size="200px" onClick={() => kakaoClipboard(clipData)} />
+    </div>
+  );
 }
 
-export default App
+export default App;

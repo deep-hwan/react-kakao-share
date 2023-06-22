@@ -28,10 +28,6 @@ export const KakaoShareButton: React.FC<KakaoShareButtonProps> = ({
     <button
       type="button"
       style={{
-        width: size ? size : "36px",
-        height: size ? size : "36px",
-        minWidth: size ? size : "36px",
-        minHeight: size ? size : "36px",
         border: "none",
         padding: 0,
         backgroundColor: "transparent",

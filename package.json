@@ -1,6 +1,6 @@
 {
   "name": "react-kakao-share",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "private": false,
   "files": [
     "dist",
@@ -30,7 +30,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "prepare": "rm -rf dist && mkdir dist && tsc"
+    "prepare": "rimraf dist && mkdir dist && tsc"
   },
   "eslintConfig": {
     "extends": [
@@ -54,7 +54,8 @@
     "@babel/cli": "^7.22.5",
     "@babel/preset-env": "^7.22.5",
     "@babel/preset-react": "^7.22.5",
-    "cross-env": "^7.0.3"
+    "cross-env": "^7.0.3",
+    "rimraf": "^5.0.1"
   },
   "description": "내가 작성한 게시글 또는 피드를 카카오톡에 공유하기 기능",
   "repository": {
@@ -62,18 +63,14 @@
     "url": "https://github.com/deep-hwan/react-kakao-share.git"
   },
   "keywords": [
-    "react",
     "typescript",
     "kakao",
-<<<<<<< HEAD
     "react-share",
     "kakao-share",
     "social-share",
-=======
     "kakao-share",
     "kakao-clipboard",
     "sns_share",
->>>>>>> 277811f90c8b94c8f6ebf8e3bae42bdb2fb4c5c0
     "clipboard"
   ],
   "author": "deep",
